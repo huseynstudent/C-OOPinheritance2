@@ -66,7 +66,7 @@ public:
         engine = _engine;
     }
 
-    void show() {
+    virtual void show() {
         cout << "ID: " << id << endl;
         cout << "Model: " << model << endl;
         cout << "Vendor: " << vendor << endl;
@@ -85,7 +85,7 @@ public:
         hasSpoiler = spoiler;
     }
 
-    void show() {
+    void show() override {
         cout << "---- Car ----" << endl;
         Vehicle::show();
         cout << "Has Spoiler? - " << (hasSpoiler ? "Yes" : "No") << endl;
@@ -103,7 +103,7 @@ public:
         hasSail = sail;
     }
 
-    void show() {
+    void show() override {
         cout << "---- Ship ----" << endl;
         Vehicle::show();
         cout << "Has Sail? - " << (hasSail ? "Yes" : "No") << endl;
@@ -123,7 +123,7 @@ public:
         passengersCapacity = capacity;
     }
 
-    void show() {
+    void show() override {
         cout << "---- Airplane ----" << endl;
         Vehicle::show();
         cout << "Engine Count: " << engineCount << endl;
